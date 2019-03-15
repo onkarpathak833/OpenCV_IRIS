@@ -30,12 +30,11 @@ object IrisApp {
 
   }
 
-  private def detectFace(imagePath1: String): Unit = {
+  private def detectFace(imagePath: String): Unit = {
 
 
     System.loadLibrary(Core.NATIVE_LIBRARY_NAME); // load opencv_java
 
-  val imagePath = "/Users/techops/Documents/My Documents/AmeyaPhoto.jpg"
     //Enter your openCV path here
     val faceDetecter = new CascadeClassifier(getClass()
       .getResource("/lbpcascade_frontalface.xml").getPath())
