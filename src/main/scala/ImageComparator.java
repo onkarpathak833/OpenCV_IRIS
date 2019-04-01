@@ -117,6 +117,7 @@ public class ImageComparator implements Serializable {
     }
 
     public boolean ifImagesEqual(Mat image1, Mat image2) {
+        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 
         DescriptorMatcher matcher = DescriptorMatcher.create(DescriptorMatcher.BRUTEFORCE_HAMMING);
         int retVal = 0;
